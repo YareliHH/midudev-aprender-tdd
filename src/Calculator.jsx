@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { evaluate } from 'mathjs';
+import { useState } from 'react'
+import { evaluate } from 'mathjs'
 
-export const operations = ['+', '-', '*', '/'];
-const equalSign = '=';
+export const operations = ['+', '-', '*', '/']
+const equalSign = '='
 
-export const rows = [[7, 8, 9], [4, 5, 6], [1, 2, 3], [0]];
+export const rows = [[7, 8, 9], [4, 5, 6], [1, 2, 3], [0]]
 
 export const Calculator = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('')
 
-  const createHandleClick = (op) => () => setValue(value.concat(op));
+  const createHandleClick = (op) => () => setValue(value.concat(op))
 
   return (
     <div>
@@ -35,5 +35,5 @@ export const Calculator = () => {
         <button onClick={() => setValue(evaluate(value))}>{equalSign}</button>
       </div>
     </div>
-  );
-};
+  )
+}
